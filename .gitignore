@@ -1,0 +1,6 @@
+# Files that should not be uploaded to the git server (i.e. github)
+
+node_modules/
+
+.DS_Store/
+
