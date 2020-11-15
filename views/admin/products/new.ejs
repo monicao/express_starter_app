@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- DISCUSS4: How to compose an HTML page using partials -->
+  <%- include('../layout/_head') %>
+</head>
+<body>
+  <%- include('../layout/_nav') %>
+  <div class="container mt-3">
+    <h1>New Product</h1>
+
+    <p>Create a new product to be added to the system. All inventory values will be 0.</p>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- See bootstrap docs for styling form: https://getbootstrap.com/docs/4.5/components/forms/-->
+        <form method="POST" action="/admin/products">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" id="title">
+          </div>
+          <div class="form-group">
+            <label for="image_url">Image URL</label>
+            <input type="text" name="imageUrl" class="form-control" id="image_url">
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <!-- Discuss5: How do we do client-side validation for better user experience? -->
+            <input type="text" name="price" class="form-control" style="width: 50%" id="price" aria-describedby="priceHelp">
+            <small id="priceHelp" class="form-text text-muted">must be at least 0</small>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <%- include('../layout/_body_end') %>
+</body>
+</html>
