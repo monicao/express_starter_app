@@ -1,0 +1,14 @@
+// Sometimes you want to override styles in your css framework.
+// This file can keep all those changes organized.
+
+// With scss you can use variables
+// DISCUSS6: How are the styles organized?
+$primary-color: #0069d9;
+
+.btn-primary {
+  background-color: $primary-color;
+}
+
+hr {
+  border-color: $primary-color;
+}

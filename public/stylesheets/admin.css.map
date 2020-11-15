@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "admin.css",
+	"sources": [
+		"admin.scss",
+		"admin/layout.scss",
+		"admin/bootstrap_overrides.scss"
+	],
+	"names": [],
+	"mappings": "ACEA,AAAA,UAAU,CAAC;EACT,UAAU,EAAE,IAAI,GACjB;;ACGD,AAAA,YAAY,CAAC;EACX,gBAAgB,EAHF,OAAO,GAItB;;AAED,AAAA,EAAE,CAAC;EACD,YAAY,EAPE,OAAO,GAQtB"
+}

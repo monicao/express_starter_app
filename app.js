@@ -20,11 +20,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+// Automatically compile scss files from public/stylesheets into css files that the browser can read
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
-  indentedSyntax: true, // true = .sass and false = .scss
-  sourceMap: true
+  indentedSyntax: false, // true = .sass and false = .scss
+  sourceMap: true,
+  debug: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
