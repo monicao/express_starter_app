@@ -23,18 +23,17 @@
         </tr>
       </thead>
       <tbody>
+        <% if(typeof message !== 'undefined' && message) {%>
+          <div class="alert alert-success" role="alert"><%= message %></div>
+        <% } %>
+        <% products.forEach((product) => { %>
         <tr>
-          <th scope="row">1</th>
-          <td><img src="/images/fabric-flower-pots.jpg"/></td>
-          <td>Fabric Flower Pots</td>
-          <td>$12.99</td>
+          <th scope="row"><%= product.id %></th>
+          <td><img src="<%= product.image_url %>"/></td>
+          <td><%= product.title %></td>
+          <td>$<%= product.price / 100 %></td>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td><img src="/images/ceramic-flower-pots.jpg"/></td>
-          <td>Ceramic Flower Pots</td>
-          <td>$15.99</td>
-        </tr>
+        <% }) %>
       </tbody>
     </table>
   </div>
